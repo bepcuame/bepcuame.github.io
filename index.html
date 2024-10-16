@@ -7,26 +7,48 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            color: #343a40;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #ff6347;
-            color: white;
-            padding: 20px;
-            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
         }
-        .container {
-            width: 80%;
-            margin: auto;
+        header h1 {
+            margin: 0;
+            display: inline-block;
+        }
+        nav {
+            display: inline-block;
+            float: right;
+        }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+        .hero {
+            position: relative;
+            height: 400px;
             overflow: hidden;
         }
-        .video {
+        .hero video, .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .content {
+            padding-top: 420px;
+        }
+        .video-section, .recipe-section, .blog-section {
             margin: 20px 0;
         }
-        .video iframe {
+        .video-section iframe {
             width: 100%;
             height: 315px;
         }
@@ -35,44 +57,49 @@
             justify-content: space-around;
             margin: 20px 0;
         }
-        .social-media img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #343a40;
-            color: white;
-        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Kênh Ẩm Thực - Khám Phá Hương Vị Mới</h1>
-    </header>
-    <div class="container">
+
+<header>
+    <h1>Kênh Ẩm Thực</h1>
+    <nav>
+        <a href="#video">Video</a>
+        <a href="#recipe">Công Thức</a>
+        <a href="#blog">Blog</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <video autoplay muted loop>
+        <source src="video.mp4" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ video.
+    </video>
+</div>
+
+<div class="content">
+    <section id="video" class="video-section">
         <h2>Video Mới Nhất</h2>
-        <div class="video">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
-        </div>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
         <h2>Video Xem Nhiều Nhất</h2>
-        <div class="video">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <h2>Mạng Xã Hội</h2>
-        <div class="social-media">
-            <a href="https://www.instagram.com/your_channel" target="_blank">
-                <img src="https://via.placeholder.com/100" alt="Instagram">
-            </a>
-            <a href="https://www.facebook.com/your_channel" target="_blank">
-                <img src="https://via.placeholder.com/100" alt="Facebook">
-            </a>
-        </div>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="recipe" class="recipe-section">
+        <h2>Công Thức Nấu Ăn</h2>
+        <p>Đây là nơi bạn có thể tìm thấy các công thức nấu ăn ngon.</p>
+    </section>
+
+    <section id="blog" class="blog-section">
+        <h2>Blog Ẩm Thực</h2>
+        <p>Đọc các bài viết thú vị về ẩm thực.</p>
+    </section>
+
+    <div class="social-media">
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://www.facebook.com" target="_blank">Facebook</a>
     </div>
-    <footer>
-        <p>&copy; 2023 Kênh Ẩm Thực. Tất cả quyền được bảo lưu.</p>
-    </footer>
+</div>
+
 </body>
 </html>
