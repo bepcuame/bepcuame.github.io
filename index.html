@@ -1,67 +1,78 @@
-
-
-# Blogger Website for Food YouTube Channel
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delicious Bites - Food YouTube Channel</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Chào Mừng Đến Với Kênh Ẩm Thực</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff6347;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .video {
+            margin: 20px 0;
+        }
+        .video iframe {
+            width: 100%;
+            height: 315px;
+        }
+        .social-media {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .social-media img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #343a40;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <<h1>Bếp của mẹ</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#recipes">Recipes</a></li>
-                <li><a href="#videos">Videos</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Kênh Ẩm Thực - Khám Phá Hương Vị Mới</h1>
     </header>
-
-    <main>
-        <section id="home">
-            <h2>Welcome to Delicious Bites!</h2>
-            <p>Your go-to place for mouth-watering recipes and cooking tips.</p>
-        </section>
-
-        <section id="about">
-            <h2>About Us</h2>
-            <p>We are passionate food lovers sharing our culinary adventures through our YouTube channel.</p>
-        </section>
-
-        <section id="recipes">
-            <h2>Featured Recipes</h2>
-            <article>
-                <h3>Spaghetti Carbonara</h3>
-                <p>A classic Italian dish that is simple yet delicious.</p>
-                <a href="video-link">Watch the Recipe</a>
-            </article>
-            <article>
-                <h3>Chocolate Cake</h3>
-                <p>Indulge in this rich and moist chocolate cake recipe.</p>
-                <a href="video-link">Watch the Recipe</a>
-            </article>
-        </section>
-
-        <section id="videos">
-            <h2>Latest Videos</h2>
-            <ul>
-                <li><a href="video-link">How to Make Sushi</a></li>
-                <li><a href="video-link">Baking the Perfect Bread</a></li>
-            </ul>
-        </section>
-    </main>
-
+    <div class="container">
+        <h2>Video Mới Nhất</h2>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <h2>Video Xem Nhiều Nhất</h2>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <h2>Mạng Xã Hội</h2>
+        <div class="social-media">
+            <a href="https://www.instagram.com/your_channel" target="_blank">
+                <img src="https://via.placeholder.com/100" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/your_channel" target="_blank">
+                <img src="https://via.placeholder.com/100" alt="Facebook">
+            </a>
+        </div>
+    </div>
     <footer>
-        <h2>Contact Us</h2>
-        <p>Email: contact@deliciousbites.com</p>
-        <p>Follow us on social media!</p>
+        <p>&copy; 2023 Kênh Ẩm Thực. Tất cả quyền được bảo lưu.</p>
     </footer>
 </body>
 </html>
