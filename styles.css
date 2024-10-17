@@ -1,0 +1,225 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header.transparent {
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent header */
+}
+
+header.opaque {
+    background-color: rgba(255, 255, 255, 1);   /* Opaque when scrolling */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);   /* Adds shadow for effect */
+}
+
+header h1 {
+    margin: 0;
+    color: #ff6347;
+}
+
+.icon-bar {
+    width: 100%; /* Full-width */
+    overflow: auto; /* Overflow due to float */
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Centers text vertically */
+  }
+  
+  .icon-bar a {
+    float: left; /* Float links side by side */
+    text-align: center; /* Center-align text */
+    width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+    padding: 12px 0; /* Some top and bottom padding */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+    color: rgb(157, 60, 60); /* White text color */
+    font-size: 20px; /* Increased font size */
+    font-weight: bold;
+  }
+  
+  .icon-bar a:hover {
+    background-color: #316ec9e0; /* Add a hover color */
+  }
+#bgVideo {
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the screen */
+    height: 100%; /* Full height of the screen */
+    object-fit: cover; /* Ensures the video covers the entire screen without distortion */
+    z-index: -1; /* Pushes the video behind other content */
+}
+.video-section h2 {
+    /* margin-top: 50px; */
+    text-align: center;
+    color: rgb(46, 207, 37);
+    background-color: rgba(206, 32, 32, 0.1);
+    height: 100px;
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Centers text vertically */
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio of 16:9 (height/width * 100) */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000; /* Optional background color */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.recipe-section h2 {
+    /* margin-top: 50px; */
+    text-align: center;
+    color: rgb(207, 179, 37);
+    background-color: rgba(46, 207, 32, 0.1);
+    height: 100px;
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Centers text vertically */
+}
+
+/* * {box-sizing:border-box} */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.social-media {
+    text-align: center;
+    margin: 40px 0;
+    color: rgb(43, 37, 207);
+    background-color: rgba(233, 50, 218, 0.534);
+    height: 150px;
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Centers text vertically */
+    flex-direction: column;
+}
+
+.fab {
+    padding: 10px;
+    font-size: 30px;
+    height: 30.5px;
+    width: 30.5px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  .fa-tiktok {
+    background: #050505;
+    color: white;
+  }
+  .fa-instagram {
+    background: #2261c5;
+    color: white;
+  }
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #343a40;
+    color: white;
+}
